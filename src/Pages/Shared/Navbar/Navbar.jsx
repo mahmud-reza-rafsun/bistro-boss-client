@@ -1,21 +1,44 @@
 import { Link } from "react-router-dom";
 import logo from "../../../assets/logo.png";
+import shopIcon from "../../../assets/icon/151-1511569_cart-notifications-free-shopping-cart-favicon-hd-png-removebg-preview.png";
 
 const Navbar = () => {
   const navLinks = (
     <>
       <li>
-        <a>Item 1</a>
+        <Link>HOME</Link>
       </li>
-
       <li>
-        <a>Item 3</a>
+        <Link>CONTACT US</Link>
+      </li>
+      <li>
+        <Link>DASHBOARD</Link>
+      </li>
+      <li>
+        <Link>OUR MENU</Link>
+      </li>
+      <li>
+        <Link className="flex justify-center items-center">
+          OUR SHOP
+          <img className="w-8" src={shopIcon} alt="" />
+        </Link>
+      </li>
+      <li>
+        <Link>SIGN OUT</Link>
       </li>
     </>
   );
   return (
-    <div className="navbar fixed bg-black text-white opacity-70 z-50 px-[60px]">
-      <div className="navbar-start">
+    <div className="navbar fixed bg-black text-white opacity-90 z-50 px-5 lg:px-[60px]">
+      <div className="navbar-start w-1/3">
+        <Link>
+          <img className="w-10  lg:w-14 object-cover" src={logo} alt="" />
+        </Link>
+      </div>
+      <div className="navbar-end w-10/12">
+        <div className=" hidden lg:flex">
+          <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+        </div>
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
@@ -36,20 +59,11 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-white absolute right-0 text-black rounded-box z-50 mt-3 w-52 p-2 shadow-xl"
           >
             {navLinks}
           </ul>
         </div>
-        <Link>
-          <img className="w-14 object-cover" src={logo} alt="" />
-        </Link>
-      </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{navLinks}</ul>
-      </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
       </div>
     </div>
   );

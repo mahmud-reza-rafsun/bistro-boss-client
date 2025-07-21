@@ -15,12 +15,12 @@ const OurMenu = () => {
           <div>
             <SectionTitle subTitle={"Check it out"} title={"FROM OUR MENU"} />
           </div>
-          <div className="flex justify-between max-w-6xl mx-auto items-center gap-16">
+          <div className="flex justify-between flex-col lg:flex-row max-w-6xl mx-auto items-center gap-16">
             <div className="">
               <img className="w-3xl rounded-md" src={bgImg} alt="" />
             </div>
-            <div className="">
-              <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+            <div className="text-center lg:text-left">
+              <h1 className="mb-5 text-3xl lg:text-5xl font-bold">Hello there</h1>
               <p className="mb-5">
                 Provident cupiditate voluptatem et in. Quaerat fugiat ut
                 assumenda excepturi exercitationem quasi. In deleniti eaque aut

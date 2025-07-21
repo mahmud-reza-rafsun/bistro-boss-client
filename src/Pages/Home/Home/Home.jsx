@@ -1,3 +1,5 @@
+import ChefService from "../../../components/ChefService/ChefService";
+import Contact from "../../../components/Contact/Contact";
 import OurMenu from "../../../components/OurMenu/OurMenu";
 import RecommendChef from "../../../components/RecommendChef/RecommendChef";
 import Testimonial from "../../../components/Testimonial/Testimonial";
@@ -10,9 +12,11 @@ const Home = () => {
         <div>
             <Banner/> 
             <Category/>
+            <ChefService/>
             <PopularMenu/>
             <RecommendChef/>
             <OurMenu/>
+            <Contact/>
             <Testimonial/>
         </div>
     );
