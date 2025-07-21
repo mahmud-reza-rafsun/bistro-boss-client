@@ -1,3 +1,4 @@
+import OurMenu from "../../../components/OurMenu/OurMenu";
 import RecommendChef from "../../../components/RecommendChef/RecommendChef";
 import Banner from "../Banner/Banner";
 import Category from "../Category/Category";
@@ -10,6 +11,7 @@ const Home = () => {
             <Category/>
             <PopularMenu/>
             <RecommendChef/>
+            <OurMenu/>
         </div>
     );
 };
