@@ -17,7 +17,7 @@ const OurMenu = () => {
           </div>
           <div className="flex justify-between max-w-6xl mx-auto items-center gap-16">
             <div className="">
-                <img className="w-3xl rounded-md" src={bgImg} alt="" />
+              <img className="w-3xl rounded-md" src={bgImg} alt="" />
             </div>
             <div className="">
               <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
@@ -26,9 +26,9 @@ const OurMenu = () => {
                 assumenda excepturi exercitationem quasi. In deleniti eaque aut
                 repudiandae et a id nisi.
               </p>
-              <button className="mt-2 py-[9px] px-6 text-sm bg-transparent cursor-pointer duration-300 border-gray-100 text-gray-100 rounded-lg font-medium border-b-3">
-              Add To Card
-            </button>
+              <button className="mt-2 py-[9px] px-6 text-sm bg-transparent cursor-pointer duration-300 hover:bg-gray-200 hover:text-gray-700 border-gray-100 text-gray-100 rounded-lg font-medium border-b-3">
+                READ MORE
+              </button>
             </div>
           </div>
         </div>
