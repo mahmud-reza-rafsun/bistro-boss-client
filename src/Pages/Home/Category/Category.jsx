@@ -8,16 +8,18 @@ import slider2 from "../../../assets/home/slide2.jpg";
 import slider3 from "../../../assets/home/slide3.jpg";
 import slider4 from "../../../assets/home/slide4.jpg";
 import slider5 from "../../../assets/home/slide5.jpg";
+import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 
 const Category = () => {
   return (
     <section className="w-11/12 mx-auto my-10">
+      <SectionTitle subTitle={'From 11.00AM to 10.00PM'} title={'Order Online'}/>
       <Swiper
         slidesPerView={4}
         spaceBetween={30}
         pagination={{ clickable: true }}
         modules={[Pagination]}
-        className="mySwiper"
+        className="mySwiper mb-20"
       >
         {/* SALADS */}
         <SwiperSlide>
