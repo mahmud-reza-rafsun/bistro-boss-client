@@ -6,20 +6,24 @@ import Testimonial from "../../../components/Testimonial/Testimonial";
 import Banner from "../Banner/Banner";
 import Category from "../Category/Category";
 import PopularMenu from "../PopularMenu/PopularMenu";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
-    return (
-        <div>
-            <Banner/> 
-            <Category/>
-            <ChefService/>
-            <PopularMenu/>
-            <RecommendChef/>
-            <OurMenu/>
-            <Contact/>
-            <Testimonial/>
-        </div>
-    );
+  return (
+    <div>
+      <Helmet>
+        <title>Home</title>
+      </Helmet>
+      <Banner />
+      <Category />
+      <ChefService />
+      <PopularMenu />
+      <RecommendChef />
+      <OurMenu />
+      <Contact />
+      <Testimonial />
+    </div>
+  );
 };
 
 export default Home;

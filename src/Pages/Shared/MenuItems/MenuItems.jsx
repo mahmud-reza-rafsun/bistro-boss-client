@@ -3,7 +3,12 @@ const MenuItems = ({ item }) => {
     <div className="flex items-start gap-4 py-4 border-b mb-12">
       {/* Left Icon */}
       <div className="">
-        <img style={{borderRadius: '0 200px 200px 200px'}} className="w-[90px]" src={item?.image} alt="" />
+        <img
+          style={{ borderRadius: "0 200px 200px 200px" }}
+          className="w-[90px]"
+          src={item?.image}
+          alt=""
+        />
       </div>
 
       {/* Text Section */}
@@ -14,7 +19,9 @@ const MenuItems = ({ item }) => {
             {item?.name}
             <span className="inline-block w-24 border-t border-dotted border-gray-400 ml-2"></span>
           </h3>
-          <span className="text-yellow-600 font-semibold text-sm">${item?.price}</span>
+          <span className="text-yellow-600 font-semibold text-sm">
+            ${item?.price}
+          </span>
         </div>
 
         {/* Description */}

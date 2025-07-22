@@ -13,7 +13,10 @@ import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 const Category = () => {
   return (
     <section className="w-11/12 mx-auto my-10">
-      <SectionTitle subTitle={'From 11.00AM to 10.00PM'} title={'Order Online'}/>
+      <SectionTitle
+        subTitle={"From 11.00AM to 10.00PM"}
+        title={"Order Online"}
+      />
       <Swiper
         slidesPerView={4}
         spaceBetween={30}
@@ -24,11 +27,7 @@ const Category = () => {
         {/* SALADS */}
         <SwiperSlide>
           <div className="relative overflow-hidden rounded-md shadow-md">
-            <img
-              src={slider1}
-              alt="Salad"
-              className="w-full object-cover"
-            />
+            <img src={slider1} alt="Salad" className="w-full object-cover" />
             <div className="absolute bottom-3 left-0 w-full text-center">
               <h3 className="text-white text-lg font-semibold drop-shadow-md">
                 SALADS
@@ -37,30 +36,10 @@ const Category = () => {
           </div>
         </SwiperSlide>
 
-        {/* SOUPS */}
-        <SwiperSlide>
-          <div className="relative overflow-hidden rounded-md shadow-md">
-            <img
-              src={slider2}
-              alt="Soup"
-              className="w-full object-cover"
-            />
-            <div className="absolute bottom-3 left-0 w-full text-center">
-              <h3 className="text-white text-lg font-semibold drop-shadow-md">
-                SOUPS
-              </h3>
-            </div>
-          </div>
-        </SwiperSlide>
-
         {/* PIZZAS */}
         <SwiperSlide>
           <div className="relative overflow-hidden rounded-md shadow-md">
-            <img
-              src={slider3}
-              alt="Pizza"
-              className="w-full object-cover"
-            />
+            <img src={slider2} alt="Soup" className="w-full object-cover" />
             <div className="absolute bottom-3 left-0 w-full text-center">
               <h3 className="text-white text-lg font-semibold drop-shadow-md">
                 PIZZAS
@@ -69,14 +48,22 @@ const Category = () => {
           </div>
         </SwiperSlide>
 
+        {/* SOUPS */}
+        <SwiperSlide>
+          <div className="relative overflow-hidden rounded-md shadow-md">
+            <img src={slider3} alt="Pizza" className="w-full object-cover" />
+            <div className="absolute bottom-3 left-0 w-full text-center">
+              <h3 className="text-white text-lg font-semibold drop-shadow-md">
+                SOUPS
+              </h3>
+            </div>
+          </div>
+        </SwiperSlide>
+
         {/* DESSERTS */}
         <SwiperSlide>
           <div className="relative overflow-hidden rounded-md shadow-md">
-            <img
-              src={slider4}
-              alt="Dessert"
-              className="w-full object-cover"
-            />
+            <img src={slider4} alt="Dessert" className="w-full object-cover" />
             <div className="absolute bottom-3 left-0 w-full text-center">
               <h3 className="text-white text-lg font-semibold drop-shadow-md">
                 DESSERTS
@@ -88,11 +75,7 @@ const Category = () => {
         {/* SALADS */}
         <SwiperSlide>
           <div className="relative overflow-hidden rounded-md shadow-md">
-            <img
-              src={slider5}
-              alt="Salad"
-              className="w-full object-cover"
-            />
+            <img src={slider5} alt="Salad" className="w-full object-cover" />
             <div className="absolute bottom-3 left-0 w-full text-center">
               <h3 className="text-white text-lg font-semibold drop-shadow-md">
                 SALADS

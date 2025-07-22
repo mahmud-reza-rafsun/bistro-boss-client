@@ -1,30 +1,34 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/logo.png";
 import shopIcon from "../../../assets/icon/151-1511569_cart-notifications-free-shopping-cart-favicon-hd-png-removebg-preview.png";
+import userIcon from "../../../assets/others/profile.png";
 
 const Navbar = () => {
   const navLinks = (
     <>
       <li>
-        <Link>HOME</Link>
+        <NavLink to="/">HOME</NavLink>
       </li>
       <li>
-        <Link>CONTACT US</Link>
+        <NavLink to="/contact-us">CONTACT US</NavLink>
       </li>
       <li>
-        <Link>DASHBOARD</Link>
+        <NavLink to="dashboard">DASHBOARD</NavLink>
       </li>
       <li>
-        <Link>OUR MENU</Link>
+        <NavLink to="/menu">OUR MENU</NavLink>
       </li>
       <li>
-        <Link className="flex justify-center items-center">
+        <NavLink to="/our-shop" className="flex justify-center items-center lg:-ml-0 -ml-[72px] lg:-mt-[3px]">
           OUR SHOP
           <img className="w-8" src={shopIcon} alt="" />
-        </Link>
+        </NavLink>
       </li>
       <li>
-        <Link>SIGN OUT</Link>
+        <NavLink to="/sign-out" className="flex justify-center items-center lg:-ml-0 -ml-[72px] lg:-mt-[3px]">
+          SIGN OUT
+          <img className="w-6 rounded-full" src={userIcon} alt="" />
+        </NavLink>
       </li>
     </>
   );
@@ -48,7 +52,6 @@ const Navbar = () => {
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              {" "}
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
