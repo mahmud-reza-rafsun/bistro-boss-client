@@ -19,7 +19,7 @@ const Navbar = () => {
         <NavLink to="/menu">OUR MENU</NavLink>
       </li>
       <li>
-        <NavLink to="/our-shop" className="flex justify-center items-center lg:-ml-0 -ml-[72px] lg:-mt-[3px]">
+        <NavLink to="/our-shop/salad" className="flex justify-center items-center lg:-ml-0 -ml-[72px] lg:-mt-[3px]">
           OUR SHOP
           <img className="w-8" src={shopIcon} alt="" />
         </NavLink>

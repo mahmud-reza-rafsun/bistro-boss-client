@@ -4,7 +4,9 @@ const FoodCard = ({ item }) => {
     <div className="card bg-gray-100 shadow-sm">
       <figure>
         <img className="h-[250px] w-full object-cover" src={image} />
-        <p>{price}</p>
+        <p className="bg-gray-800 absolute text-white py-1 px-2 text-sm top-5 right-5">
+          $ {price}
+        </p>
       </figure>
       <div className="text-center py-5">
         <h2 className="font-semibold text-lg">{name}</h2>
