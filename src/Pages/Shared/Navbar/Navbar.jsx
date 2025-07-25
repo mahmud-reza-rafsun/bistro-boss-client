@@ -2,8 +2,22 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/logo.png";
 import shopIcon from "../../../assets/icon/151-1511569_cart-notifications-free-shopping-cart-favicon-hd-png-removebg-preview.png";
 import userIcon from "../../../assets/others/profile.png";
+import { useContext } from "react";
+import { AuthContext } from "../../../providers/AuthProvider";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
+  const { logOut, user } = useContext(AuthContext);
+  const handleLogOut = () => {
+    logOut()
+      .then((result) => {
+        toast.success('Log Out Successful!!!')
+      })
+      .catch(error => {
+        toast.error(error.message);
+      })
+  }
+
   const navLinks = (
     <>
       <li>
@@ -19,17 +33,33 @@ const Navbar = () => {
         <NavLink to="/menu">OUR MENU</NavLink>
       </li>
       <li>
-        <NavLink to="/our-shop/salad" className="flex justify-center items-center lg:-ml-0 -ml-[72px] lg:-mt-[3px]">
+        <NavLink
+          to="/our-shop/salad"
+          className="flex justify-center items-center lg:-ml-0 -ml-[72px] lg:-mt-[3px]"
+        >
           OUR SHOP
           <img className="w-8" src={shopIcon} alt="" />
         </NavLink>
       </li>
-      <li>
-        <NavLink to="/sign-out" className="flex justify-center items-center lg:-ml-0 -ml-[72px] lg:-mt-[3px]">
-          SIGN OUT
-          <img className="w-6 rounded-full" src={userIcon} alt="" />
-        </NavLink>
-      </li>
+
+      {
+        user ?
+          <div className="flex gap-3 justify-center items-center mt-1 lg:-mt-1 lg:ml-0 -ml-14">
+            <button onClick={handleLogOut} className="btn btn-sm bg-red-500 border-none text-white shadow-none">Log Out</button>
+            <img className="w-9 rounded-full" src={user?.photoURL} alt="" />
+          </div>
+          :
+          <li>
+            <NavLink
+              to="/login"
+              className="flex justify-center items-center lg:-ml-0 -ml-[100px] lg:-mt-[3px]"
+            >
+              LOGIN
+              <img className="w-6 rounded-full" src={userIcon} alt="" />
+            </NavLink>
+          </li>
+      }
+
     </>
   );
   return (
