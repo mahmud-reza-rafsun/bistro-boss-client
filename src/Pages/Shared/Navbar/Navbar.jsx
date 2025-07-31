@@ -6,9 +6,11 @@ import { AuthContext } from "../../../providers/AuthProvider";
 import toast from "react-hot-toast";
 import { BsFillCartCheckFill } from "react-icons/bs";
 import useCart from "../../../hooks/useCart";
+import useAdmin from "../../../hooks/useAdmin";
 
 const Navbar = () => {
   const { logOut, user } = useContext(AuthContext);
+  const [isAdmin] = useAdmin();
   const [cart] = useCart();
   const handleLogOut = () => {
     logOut()
@@ -29,7 +31,12 @@ const Navbar = () => {
         <NavLink to="/contact-us">CONTACT US</NavLink>
       </li>
       <li>
-        <NavLink to="dashboard">DASHBOARD</NavLink>
+        {
+          user && isAdmin && <NavLink to="dashboard/admin-home">DASHBOARD</NavLink>
+        }
+        {
+          user && !isAdmin && <NavLink to="dashboard/user-home">DASHBOARD</NavLink>
+        }
       </li>
       <li>
         <NavLink to="/menu">OUR MENU</NavLink>

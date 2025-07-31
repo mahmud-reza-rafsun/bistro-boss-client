@@ -79,7 +79,7 @@ const CheckoutForm = () => {
                 }
                 axiosSecure.post('/payments', payment);
                 refetch();
-                navigate('dashboard/payment-history');
+                navigate('/dashboard/payment-history');
             }
         }
     }

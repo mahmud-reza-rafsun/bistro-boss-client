@@ -40,7 +40,7 @@ const Dashboard = () => {
                                     </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/dashboard/admin-home" className="text-lg text-white"><BsJournalBookmark />
+                                    <NavLink to="/dashboard/manage-booking" className="text-lg text-white"><BsJournalBookmark />
                                         <span className="text-[15px] font-medium mt-[2px]">Manage Booking</span>
                                     </NavLink>
                                 </li>
@@ -53,7 +53,7 @@ const Dashboard = () => {
                             :
                             <>
                                 <li>
-                                    <NavLink to="/cart" className="text-lg text-white"><IoHomeOutline />
+                                    <NavLink to="/dashboard/user-home" className="text-lg text-white"><IoHomeOutline />
                                         <span className="text-[15px] font-medium mt-[2px]">Home</span>
                                     </NavLink>
                                 </li>

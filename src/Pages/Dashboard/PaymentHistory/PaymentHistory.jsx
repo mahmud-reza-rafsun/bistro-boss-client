@@ -13,7 +13,6 @@ const PaymentHistory = () => {
             return res.data;
         }
     })
-    console.log(payments);
     return (
         <div className="bg-gray-100 p-4 rounded-md">
             <div className="bg-green-200 py-3 rounded-md">

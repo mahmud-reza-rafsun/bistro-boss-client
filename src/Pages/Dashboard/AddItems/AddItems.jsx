@@ -49,7 +49,7 @@ const AddItems = () => {
     return (
         <div className="flex justify-center items-center min-h-[calc(100vh-306px)] mt-5">
             <Helmet>
-                <title>Bistro Boss | Register</title>
+                <title>Bistro Boss | Add Items</title>
             </Helmet>
             <div className="flex w-full border-gray-200 max-w-sm mx-auto overflow-hidden rounded-lg shadow-lg border lg:max-w-4xl py-8">
 

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import useMenu from "../../../hooks/useMenu";
 import ManageItemsTable from "./ManageItemsTable";
 
@@ -5,6 +6,9 @@ const ManageItems = () => {
     const [menu] = useMenu();
     return (
         <div>
+            <Helmet>
+                <title>Manage Items</title>
+            </Helmet>
             <div className="bg-gray-100 p-4 rounded-md">
                 <div className="px-3 bg-green-200 py-3 rounded-md">
                     <h2 className="text-gray-600 text-[15px] font-medium">Total Items: {menu.length}</h2>
